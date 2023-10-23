@@ -8,7 +8,7 @@ function fetchTopRatedMovies() {
         .then(response => response.json())
         .then(data => {
 
-            // 영화 데이터를 반복하며 카드를 생성합니다.
+            // 영화 데이터를 반복하며 카드를 생성
             const movieContainer = document.querySelector('.mycards');
 
             data.results.forEach(movie => {
@@ -22,10 +22,9 @@ function fetchTopRatedMovies() {
                 };
 
 
-
+                // 영화 이미지 생성
                 const image = document.createElement('img');
                 image.src = `https://image.tmdb.org/t/p/w300${movie.poster_path}`;
-
 
                 const cardBody = document.createElement('div');
 
